@@ -1,0 +1,151 @@
+@font-face { /*https://maplestory.nexon.com/Media/Font*/
+  font-family: 'MaplestoryOTFLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+section {
+  width: 510px;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  word-break: break-all;
+  text-align: center;
+  font-family: "MaplestoryOTFLight";
+}
+
+#input {
+  width: 300px;
+  height: 2rem;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  border: 1px solid #e0e5f6;
+  background: #ffffff;
+  margin: 0rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#input::placeholder {
+  font-size: 1rem;
+}
+
+#colorinput {
+  width: 300px;
+  height: 2rem;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  border: 1px solid #e0e5f6;
+  background: #ffffff;
+  margin: 0rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#colorinput::placeholder {
+  font-size: 1rem;
+}
+
+#grey {
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+body {
+  background: #ffffff;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+mark {
+  background: #febf0090;
+}
+
+p {
+  opacity: .8;
+  font-size: 15px;
+}
+
+button {
+  width: 80px;
+  height: 35px;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #dddddd;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ddffdd;
+  color: #333333;
+  border: 1px solid #dddddd;
+}
+
+button:active {
+  background: #ccffcc;
+  color: #333333;
+  border: 1px solid #dddddd;
+}
+
+canvas {
+  border: 0px solid black;
+}
+
+.alertarea_out {
+  width: 666px;
+  height: 2rem;
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.alertarea_in {
+  width: 666px;
+  height: 2rem;
+  margin: auto;
+  padding: 1rem 0rem 0rem 0rem;
+  background: #ffffff;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+#mainArea {
+  position: relative;
+  margin-top: 1rem;
+}
+
+#mainCanvas {
+  position: relative;
+  margin-top: 1rem;
+  width: 666px;
+  height: 200px;
+}
+
+#belowCanvas {
+  position: relative;
+}
+
+#preview {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
