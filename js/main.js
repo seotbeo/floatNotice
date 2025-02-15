@@ -4,7 +4,6 @@ var fontSize = 14;
 var color = "#ffffff";
 var font = "Nanum Gothic"
 var noticeType = 0
-var loading = false
 
 function init() {
     fillComboBox();
@@ -13,8 +12,6 @@ function init() {
 }
 
 function setNoticeType(v) {
-    if (loading) return;
-
     type = v;
     const c = document.getElementById("colorinput");
     c.value = getColorStr((typeList.find(item => item.id == type)).fontColor);
@@ -39,8 +36,6 @@ function fillComboBox() {
 }
 
 function loadResource(type) {
-    loading = true;
-    
     const input = document.getElementById('input');
     var path = "floatNotice\\FloatNotice.";
     var format = ".png";
@@ -61,7 +56,6 @@ function loadResource(type) {
         loadedCount++;
         if (loadedCount === reslist.length)
         {
-            loading = false;
             requestAnimationFrame(() => draw(input.value));
         }
     }
@@ -83,8 +77,6 @@ function loadResource(type) {
 }
 
 function draw(name) {
-    if (loading) return;
-
     clear();
 
     if (name == undefined || name == "")
