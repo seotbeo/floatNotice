@@ -271,12 +271,6 @@ const typeList =
         type: 0,
     },
     {
-        id: 60,
-        y: 65,
-        fontColor: 0,
-        type: 0,
-    },
-    {
         id: 61,
         y: 100,
         fontColor: 0,
@@ -1347,12 +1341,6 @@ const typeList =
     {
         id: 420,
         y: 52,
-        fontColor: 0,
-        type: 0,
-    },
-    {
-        id: 421,
-        y: 20,
         fontColor: 0,
         type: 0,
     },
