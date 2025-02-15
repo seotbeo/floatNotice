@@ -62,7 +62,7 @@ function loadResource(type) {
         if (loadedCount === reslist.length)
         {
             loading = false;
-            draw(input.value);
+            requestAnimationFrame(() => draw(input.value));
         }
     }
 
@@ -180,7 +180,7 @@ function colorChange() {
 
     color = "#" + value;
 
-    draw(input.value);
+    requestAnimationFrame(() => draw(input.value));
     showAlert("색이 변경되었습니다: " + color);
 }
 
@@ -194,6 +194,6 @@ function checkboxMapleFont(event) {
         font = "Nanum Gothic";
     }
     const input = document.getElementById('input');
-    draw(input.value);
+    requestAnimationFrame(() => draw(input.value));
     showAlert("폰트가 변경되었습니다.");
 }
