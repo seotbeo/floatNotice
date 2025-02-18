@@ -1381,6 +1381,36 @@ const typeList =
         type: 0,
     },
     {
+        id: 430,
+        y: 28,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 431,
+        y: 28,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 432,
+        y: 28,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 433,
+        y: 28,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 437,
+        y: 84,
+        fontColor: 0,
+        type: 0,
+    },
+    {
         id: 438,
         y: 40,
         fontColor: 0,
@@ -1389,6 +1419,24 @@ const typeList =
     {
         id: 441,
         y: 77,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 442,
+        y: 48,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 443,
+        y: 48,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 444,
+        y: 48,
         fontColor: 0,
         type: 0,
     },
