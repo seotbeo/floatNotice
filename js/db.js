@@ -1500,4 +1500,16 @@ const typeList =
         fontColor: 0,
         type: 0,
     },
+    {
+        id: 458,
+        y: 66,
+        fontColor: 0,
+        type: 0,
+    },
+    {
+        id: 460,
+        y: 27,
+        fontColor: 0,
+        type: 0,
+    },
 ]
