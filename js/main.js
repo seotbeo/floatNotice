@@ -2,7 +2,7 @@ var resources = new Array();
 var type = 0;
 var fontSize = 14;
 var color = "#ffffff";
-var font = "Nanum Gothic"
+var font = "돋움"
 var noticeType = 0
 
 function init() {
@@ -89,9 +89,9 @@ function draw(name) {
     var w2 = 0;
     var h = (typeList.find(item => item.id == type)).y
     
-    ctx.font = fontSize + "px " + font;
+    ctx.font = "bold " + fontSize + "px " + font;
     ctx.textAlign = "left";
-    ctx.letterSpacing = "2.33px";
+    ctx.letterSpacing = "0px";
     const rv = ctx.measureText(name);
     const fontWidth = Math.ceil(rv.width);
 
@@ -105,11 +105,11 @@ function draw(name) {
         canvas.height = resources[0].height;
 
         ctx.imageSmoothingEnabled = false;
-        ctx.font = fontSize + "px " + font;
+        ctx.font = "bold " + fontSize + "px " + font;
         ctx.fillStyle = color;
         ctx.strokeStyle = color;
         ctx.textAlign = "left";
-        ctx.letterSpacing = "2.33px";
+        ctx.letterSpacing = "0px";
 
         ctx.drawImage(resources[0], 0, 0);
         for (let i = w1; i < w1 + fontWidth; i += wc) {
@@ -127,11 +127,11 @@ function draw(name) {
         canvas.height = resources[0].height;
 
         ctx.imageSmoothingEnabled = false;
-        ctx.font = fontSize + "px " + font;
+        ctx.font = "bold " + fontSize + "px " + font;
         ctx.fillStyle = color;
         ctx.strokeStyle = color;
         ctx.textAlign = "left";
-        ctx.letterSpacing = "2.33px";
+        ctx.letterSpacing = "0px";
 
         ctx.drawImage(resources[0], 0, 0);
         ctx.fillText(name, (w1 - fontWidth) / 2, h + fontSize/2 + 5);
