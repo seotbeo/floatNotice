@@ -4,6 +4,7 @@ var fontSize = 14;
 var color = "#ffffff";
 var font = "돋움"
 var noticeType = 0
+var suspend = false;
 
 function init() {
     fillComboBox();
@@ -12,6 +13,9 @@ function init() {
 }
 
 function setNoticeType(v) {
+    if (suspend) return;
+
+    suspend = true;
     type = v;
     const c = document.getElementById("colorinput");
     c.value = getColorStr((typeList.find(item => item.id == type)).fontColor);
@@ -136,6 +140,8 @@ function draw(name) {
         ctx.drawImage(resources[0], 0, 0);
         ctx.fillText(name, (w1 - fontWidth) / 2, h + fontSize/2 + 5);
     }
+
+    suspend = false;
 }
 
 function clear() {
