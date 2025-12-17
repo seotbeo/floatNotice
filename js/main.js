@@ -26,6 +26,7 @@ function setNoticeType(v) {
 
 function getColorStr(integer) {
     var value = 16777215 + integer;
+    if (value > 16777215) return "ffffff";
     return value.toString(16);
 }
 
@@ -100,7 +101,7 @@ function draw(name) {
     const fontWidth = Math.ceil(rv.width);
 
 
-    if (noticeType == 0) {
+    if (noticeType == 0 || noticeType == 2) {
         var w1 = resources[0].width
         var wc = resources[1].width
         var we = resources[2].width
@@ -124,7 +125,7 @@ function draw(name) {
         ctx.drawImage(resources[2], w2, 0);
         ctx.fillText(name, (w1 + w2 - fontWidth) / 2, h + fontSize/2 + 5);
     }
-    else {
+    else if (noticeType == 1) {
         var w1 = resources[0].width
 
         canvas.width = w1;
