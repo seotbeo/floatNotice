@@ -1,7 +1,7 @@
 var resources = new Array();
 var type = 0;
 var fontSize = 14;
-var color = "#ffffff";
+var color = "rgba(255, 255, 255, 255)";
 var font = "돋움"
 var noticeType = 0
 var suspend = false;
@@ -19,15 +19,24 @@ function setNoticeType(v) {
     type = v;
     const c = document.getElementById("colorinput");
     c.value = getColorStr((typeList.find(item => item.id == type)).fontColor);
-    color = "#" + c.value;
+    color = intToRGBA(c.value);
 
     loadResource(type);
 }
 
 function getColorStr(integer) {
-    var value = 16777215 + integer;
-    if (value > 16777215) return "ffffff";
-    return value.toString(16);
+    if (integer === 0) return "ffffffff";
+    return (integer >>> 0).toString(16).padStart(8, '0');
+}
+
+function intToRGBA(colorStr) {
+    var colorInt = parseInt(colorStr, 16);
+    const a = ((colorInt >>> 24) & 0xFF) / 255;
+    const r = (colorInt >>> 16) & 0xFF;
+    const g = (colorInt >>> 8) & 0xFF;
+    const b = colorInt & 0xFF;
+
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
 function fillComboBox() {
@@ -165,19 +174,15 @@ function save()
 function colorChange() {
     const c = document.getElementById("colorinput");
     const input = document.getElementById('input');
-    var value = c.value;
-    if (value.length != 6)
-    {
-        value = "ffffff";
-    }
+    var value = intToRGBA(c.value);
 
-    if (color == "#" + value)
+    if (color == value)
     {
         showAlert("현재 적용 중인 색상과 동일합니다. " + color);
         return;
     }
 
-    color = "#" + value;
+    color = value;
 
     requestAnimationFrame(() => draw(input.value));
     showAlert("색이 변경되었습니다: " + color);
